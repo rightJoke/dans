@@ -38,6 +38,8 @@ namespace PetShop
             }
             app.UseStaticFiles();
 
+            app.UseStatusCodePages();
+
             app.UseRouting();
 
             app.UseAuthorization();

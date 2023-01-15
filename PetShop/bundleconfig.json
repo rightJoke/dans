@@ -1,0 +1,44 @@
+[
+  {
+    "outputFileName": "wwwroot/css/bundle.css",
+    "inputFiles": [
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce-ajax-filters/berocket/assets/css/font-awesome.min6a4d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce-ajax-filters/assets/frontend/css/fullmain.min2841.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/instagram-feed-pro/css/sbi-styles.min57d7.css",
+      //"wwwroot/petmania.vamtam.com/wp-includes/css/dist/block-library/style.min6a4d.css"
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style1da8.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style1da8.css"
+      "wwwroot/petmania.vamtam.com/wp-includes/css/classic-themes.min68b3.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/vamtam-product-qa/asset/css/vamtam_product_qa_style6a4d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layoutaf8d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreenaf8d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce/assets/css/woocommerceaf8d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woocommerce-bookings/dist/css/frontend606a.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/css/perfect-scrollbar.min6a4d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woo-smart-wishlist/assets/libs/perfect-scrollbar/css/custom-theme6a4d.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woo-smart-wishlist/assets/css/icons3428.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/woo-smart-wishlist/assets/css/frontend3428.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/ajax-search-for-woocommerce/assets/css/style.min3c17.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min91ce.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/css/frontend.mina560.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/css/post-418b7.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/plugins/elementor-pro/assets/css/frontend.mina560.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/custom-icons/theme-icons/style8a54.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.mina560.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.mina560.css",
+      "wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/css/post-156447f3.css",
+      "wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/css/post-200047f3.css",
+      "wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/css/post-213847f3.css",
+      "wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/css/post-85943bc9.css",
+      "wwwroot/petmania.vamtam.com/wp-content/uploads/elementor/css/post-602247f3.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor-pro/assets/css/woocommerce-notices.mina560.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/themes/petmania/vamtam/assets/css/dist/elementor/elementor-all7163.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/themes/petmania/vamtam/assets/css/dist/elementor/responsive/elementor-max7163.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/themes/petmania/vamtam/assets/css/dist/elementor/responsive/elementor-below-max7163.css",
+      //"wwwroot/petmania.vamtam.com/wp-content/themes/petmania/vamtam/assets/css/dist/elementor/responsive/elementor-small7163.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min52d5.css",
+      "wwwroot/petmania.vamtam.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css"
+    ]
+  }
+]
