@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PetShop.Data.Abstract;
 using PetShop.Data.Concrete.Ef;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace PetShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<PetContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AzureConnection"),b=>b.MigrationsAssembly("PetShop")));
+            services.AddTransient<IPageRepository, EfPageRepository>();
             services.AddControllersWithViews();
         }
 

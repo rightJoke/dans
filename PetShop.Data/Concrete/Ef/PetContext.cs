@@ -19,5 +19,6 @@ namespace PetShop.Data.Concrete.Ef
         public DbSet<Animal> Animals { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Page> Pages { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

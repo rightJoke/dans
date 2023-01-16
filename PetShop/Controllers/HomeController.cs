@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using PetShop.Data.Abstract;
 using PetShop.Models;
 using System;
 using System.Collections.Generic;
@@ -13,14 +14,25 @@ namespace PetShop.Controllers
     {
 
 
+        private IPageRepository pageRepository;
+        public HomeController(IPageRepository _pageRepository)
+        {
+            pageRepository = _pageRepository;
+
+        }
         public IActionResult Index()
         {
             return View();
         }
-       
-        public IActionResult About()
+
+        public IActionResult About(int id=1)
         {
-            return View();
+            var entity = pageRepository.Get(id);
+            if (entity != null)
+            {
+                return View(entity);
+            }
+            return RedirectToAction("Index");
         }
 
         public IActionResult Privacy()
