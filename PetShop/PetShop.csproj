@@ -50,4 +50,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PetShop.Data\PetShop.Data.csproj" />
+    <ProjectReference Include="..\PetShop.Entity\PetShop.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

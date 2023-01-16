@@ -14,7 +14,6 @@ namespace PetShop.Entity
         public bool hasIssue { get; set; }
         public string PhotoUrl { get; set; }
         public string TinyPhotoUrl { get; set; }
-        public Genre Genre { get; set; }
         public List<Genre> Genres { get; set; }
     }
 }
