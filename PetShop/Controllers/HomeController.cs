@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using PetShop.Data.Abstract;
 using PetShop.Models;
@@ -22,7 +23,19 @@ namespace PetShop.Controllers
         }
         public IActionResult Index()
         {
-            return View(ProductRepository.GetAll().Where(i=>i.IsHome).ToList());
+            return View(ProductRepository.GetAll().Where(i=>i.IsHome)
+                .Include(i=>i.Images)
+                .Include(i=>i.ProductDetails)
+                .Select(i=>new ProductListModel()
+                {
+                    Product = i,
+                    ProductDetails=i.ProductDetails,
+                    Images=i.Images
+                }).ToList()
+                );
+
+
+
         }
 
         public IActionResult About(int id=1)
