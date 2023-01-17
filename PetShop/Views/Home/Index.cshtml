@@ -628,7 +628,7 @@
                                 <span class="elementor-heading-title elementor-size-default"><a href="~/petmania.vamtam.com/returns/index.html">Free Shipping & Returns!</a></span>
                             </div>
                         </div>
-                   
+
                         <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-02ff258 elementor-widget__width-auto elementor-nav-menu--dropdown-none vamtam-has-mobile-disable-scroll elementor-widget elementor-widget-nav-menu" data-id="02ff258" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;}" data-widget_type="nav-menu.default">
                             <div class="elementor-widget-container">
                                 <nav migration_allowed="1" migrated="0" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
@@ -1643,42 +1643,50 @@
                                                                                                     <ul class="products elementor-grid vamtam-wc columns-4">
                                                                                                         @foreach (var item1 in Model)
                                                                                                         {
-                                                                                                            if(item1.Genre.GenreId==1)
-                                                                                                            { 
+                                                                                                            if (item1.Genre.GenreId == 1)
+                                                                                                            {
 
-                                                                                                            <li class="product type-product post-3017 status-publish first instock product_cat-canned-food product_cat-catnip-grass product_cat-dry-food product_cat-food-dog product_cat-food-cat product_cat-food-toppers-cat product_cat-veterinary-authorized-diets has-post-thumbnail featured taxable shipping-taxable purchasable product-type-variable has-default-attributes">
-                                                                                                                <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> @foreach (var itemImage in item1.Images) {<img width="426" height="426"    src="~/img/foods/dog/@itemImage.ImageUrl"   class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy"   sizes="(max-width: 426px) 100vw, 426px">} </a> <div class="vamtam-product-content">
+                                                                                                                <li class="product type-product post-3017 status-publish first instock product_cat-canned-food product_cat-catnip-grass product_cat-dry-food product_cat-food-dog product_cat-food-cat product_cat-food-toppers-cat product_cat-veterinary-authorized-diets has-post-thumbnail featured taxable shipping-taxable purchasable product-type-variable has-default-attributes">
                                                                                                                     <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                                                                        @foreach (var itemImage in item1.Images)
+                                                                                                                        {<img width="426" height="426" src="~/img/foods/dog/@itemImage.ImageUrl" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" sizes="(max-width: 426px) 100vw, 426px">}
+                                                                                                                    </a> <div class="vamtam-product-content">
+                                                                                                                        <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 
-                                                                                                                        <h2 class="woocommerce-loop-product__title">
+                                                                                                                            <h2 class="woocommerce-loop-product__title">
 
-                                                                                                                            @item1.Product.ProductName
-                                                                                                                            
-                                                                                                                        </h2>
+                                                                                                                                @item1.Product.ProductName
 
-                                                                                                                    </a>
-                                                                                                                    @foreach (var item2 in item1.ProductDetails)
-                                                                                                                    {
+                                                                                                                            </h2>
+
+                                                                                                                        </a>
 
 
                                                                                                                         <span class="price">
+
                                                                                                                             <span class="woocommerce-Price-amount amount">
                                                                                                                                 <bdi>
-                                                                                                                                    <span class="woocommerce-Price-currencySymbol">
+                                                                                                                                    @if (item1.ProductDetails.Count() > 1)
+                                                                                                                                    {
+                                                                                                                                        <span class="woocommerce-Price-currencySymbol">$</span>
 
-                                                                                                                                        $
-                                                                                                                                    </span>@item2.Price
+                                                                                                                                        @item1.ProductDetails.Min(i => i.Price)
+                                                                                                                                        <span>-</span>
+                                                                                                                                    }
                                                                                                                                 </bdi>
                                                                                                                             </span>
+
+                                                                                                                            <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>@item1.ProductDetails.Max(i => i.Price)</bdi></span>
                                                                                                                         </span>
-                                                                                                                    }
-                                                                                                                </div>
-                                                                                                                <div class="vamtam-add-to-cart-wrap"><a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" data-quantity="1" class="button wp-element-button product_type_variable add_to_cart_button" data-product_id="3017" data-product_sku="0984503" aria-label="Select options for “Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats”" rel="nofollow">Select options</a></div> <button class="woosw-btn woosw-btn-3017" data-id="3017" data-product_name="Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats" data-product_image="https://petmania.vamtam.com/wp-content/uploads/2022/07/ignore-export5-150x150.jpg"> </button>
-                                                                                                            </li>
+
+
+                                                                                                                    </div>
+                                                                                                                    <div class="vamtam-add-to-cart-wrap"><a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" data-quantity="1" class="button wp-element-button product_type_variable add_to_cart_button" data-product_id="3017" data-product_sku="0984503" aria-label="Select options for “Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats”" rel="nofollow">Select options</a></div> <button class="woosw-btn woosw-btn-3017" data-id="3017" data-product_name="Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats" data-product_image="https://petmania.vamtam.com/wp-content/uploads/2022/07/ignore-export5-150x150.jpg"> </button>
+                                                                                                                </li>
                                                                                                             }
-                                                                                                        
+
                                                                                                         }
-                                                                                                        </ul>
+                                                                                                    </ul>
                                                                                                     <div class="vamtam-nav">
                                                                                                         <span class="vamtam-nav-btn vamtam-nav-btn-prev disabled">
                                                                                                             <i class="vamtamtheme- vamtam-theme-arrow-left"></i>
@@ -1714,8 +1722,10 @@
                                                                                                             {
 
                                                                                                                 <li class="product type-product post-3017 status-publish first instock product_cat-canned-food product_cat-catnip-grass product_cat-dry-food product_cat-food-dog product_cat-food-cat product_cat-food-toppers-cat product_cat-veterinary-authorized-diets has-post-thumbnail featured taxable shipping-taxable purchasable product-type-variable has-default-attributes">
-                                                                                                                    <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> @foreach (var itemImage in item1.Images)
-                                                                                                                    {<img width="426" height="426" src="~/img/foods/cat/@itemImage.ImageUrl" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" sizes="(max-width: 426px) 100vw, 426px">} </a> <div class="vamtam-product-content">
+                                                                                                                    <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                                                                        @foreach (var itemImage in item1.Images)
+                                                                                                                        {<img width="426" height="426" src="~/img/foods/cat/@itemImage.ImageUrl" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" sizes="(max-width: 426px) 100vw, 426px">}
+                                                                                                                    </a> <div class="vamtam-product-content">
                                                                                                                         <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 
                                                                                                                             <h2 class="woocommerce-loop-product__title">
@@ -1725,21 +1735,23 @@
                                                                                                                             </h2>
 
                                                                                                                         </a>
-                                                                                                                        @foreach (var item2 in item1.ProductDetails)
-                                                                                                                        {
 
+                                                                                                                        <span class="price">
 
-                                                                                                                            <span class="price">
-                                                                                                                                <span class="woocommerce-Price-amount amount">
-                                                                                                                                    <bdi>
-                                                                                                                                        <span class="woocommerce-Price-currencySymbol">
+                                                                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                                                                <bdi>
+                                                                                                                                    @if (item1.ProductDetails.Count() > 1)
+                                                                                                                                    {
+                                                                                                                                        <span class="woocommerce-Price-currencySymbol">$</span>
 
-                                                                                                                                            $
-                                                                                                                                        </span>@item2.Price
-                                                                                                                                    </bdi>
-                                                                                                                                </span>
+                                                                                                                                        @item1.ProductDetails.Min(i => i.Price)
+                                                                                                                                        <span>-</span>
+                                                                                                                                    }
+                                                                                                                                </bdi>
                                                                                                                             </span>
-                                                                                                                        }
+
+                                                                                                                            <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>@item1.ProductDetails.Max(i => i.Price)</bdi></span>
+                                                                                                                        </span>
                                                                                                                     </div>
                                                                                                                     <div class="vamtam-add-to-cart-wrap"><a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" data-quantity="1" class="button wp-element-button product_type_variable add_to_cart_button" data-product_id="3017" data-product_sku="0984503" aria-label="Select options for “Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats”" rel="nofollow">Select options</a></div> <button class="woosw-btn woosw-btn-3017" data-id="3017" data-product_name="Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats" data-product_image="https://petmania.vamtam.com/wp-content/uploads/2022/07/ignore-export5-150x150.jpg"> </button>
                                                                                                                 </li>

@@ -23,18 +23,18 @@ namespace PetShop.Controllers
         }
         public IActionResult Index()
         {
-            return View(ProductRepository.GetAll().Where(i=>i.IsHome)
-                .Include(i=>i.Images)
-                .Include(i=>i.ProductDetails)
-                .Include(i=>i.Genre)
-                .Select(i=>new ProductListModel()
+            var product = ProductRepository.GetAll().Where(i => i.IsHome)
+                .Include(i => i.Images)
+                .Include(i => i.ProductDetails)
+                .Include(i => i.Genre)
+                .Select(i => new ProductListModel()
                 {
                     Product = i,
-                    ProductDetails=i.ProductDetails,
-                    Images=i.Images,
-                    Genre=i.Genre
-                }).ToList()
-                );
+                    ProductDetails = i.ProductDetails,
+                    Images = i.Images,
+                    Genre = i.Genre
+                }).ToList();
+            return View(product);
 
 
 
