@@ -23,11 +23,11 @@ namespace PetShop.Data.Concrete.Ef
         }
         public ProductDetail getMaxPrice(int id)
         {
-            return petContext.ProductDetails.OrderByDescending(i => i.Price).FirstOrDefault();
+            return petContext.ProductDetails.Where(i => i.Product.ProductId == id).OrderByDescending(i=>i.Price).FirstOrDefault();
         }
         public ProductDetail getMinPrice(int id)
         {
-            return petContext.ProductDetails.OrderBy(i => i.Price).FirstOrDefault();
+            return petContext.ProductDetails.Where(i => i.Product.ProductId == id).OrderBy(i => i.Price).FirstOrDefault();
         }
     }
 }
