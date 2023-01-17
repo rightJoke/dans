@@ -1643,7 +1643,8 @@
                                                                                                     <ul class="products elementor-grid vamtam-wc columns-4">
                                                                                                         @foreach (var item1 in Model)
                                                                                                         {
-
+                                                                                                            if(item1.Genre.GenreId==1)
+                                                                                                            { 
 
                                                                                                             <li class="product type-product post-3017 status-publish first instock product_cat-canned-food product_cat-catnip-grass product_cat-dry-food product_cat-food-dog product_cat-food-cat product_cat-food-toppers-cat product_cat-veterinary-authorized-diets has-post-thumbnail featured taxable shipping-taxable purchasable product-type-variable has-default-attributes">
                                                                                                                 <a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> @foreach (var itemImage in item1.Images) {<img width="426" height="426"    src="~/img/@itemImage.ImageUrl"   class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy"   sizes="(max-width: 426px) 100vw, 426px">} </a> <div class="vamtam-product-content">
@@ -1674,8 +1675,11 @@
                                                                                                                 </div>
                                                                                                                 <div class="vamtam-add-to-cart-wrap"><a href="https://petmania.vamtam.com/product/stella-chewys-absolutely-rabbit-grain-free-dinner-patties-freeze-dried-raw-dog-food/" data-quantity="1" class="button wp-element-button product_type_variable add_to_cart_button" data-product_id="3017" data-product_sku="0984503" aria-label="Select options for “Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats”" rel="nofollow">Select options</a></div> <button class="woosw-btn woosw-btn-3017" data-id="3017" data-product_name="Stella &amp; Chewy's Wild weenies grain free chicken recipe freeze dried raw dog treats" data-product_image="https://petmania.vamtam.com/wp-content/uploads/2022/07/ignore-export5-150x150.jpg"> </button>
                                                                                                             </li>
+                                                                                                            }
+                                                                                                        
                                                                                                         }
-                                                                                                        </ul><div class="vamtam-nav">
+                                                                                                        </ul>
+                                                                                                    <div class="vamtam-nav">
                                                                                                         <span class="vamtam-nav-btn vamtam-nav-btn-prev disabled">
                                                                                                             <i class="vamtamtheme- vamtam-theme-arrow-left"></i>
                                                                                                         </span>

@@ -26,11 +26,13 @@ namespace PetShop.Controllers
             return View(ProductRepository.GetAll().Where(i=>i.IsHome)
                 .Include(i=>i.Images)
                 .Include(i=>i.ProductDetails)
+                .Include(i=>i.Genre)
                 .Select(i=>new ProductListModel()
                 {
                     Product = i,
                     ProductDetails=i.ProductDetails,
-                    Images=i.Images
+                    Images=i.Images,
+                    Genre=i.Genre
                 }).ToList()
                 );
 

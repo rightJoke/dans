@@ -11,5 +11,6 @@ namespace PetShop.Models
         public Product Product { get; set; }
         public IEnumerable<Image> Images  { get; set; }
         public IEnumerable<ProductDetail> ProductDetails { get; set; }
+        public Genre Genre { get; set; }
     }
 }
