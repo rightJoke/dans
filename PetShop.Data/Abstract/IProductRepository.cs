@@ -9,5 +9,7 @@ namespace PetShop.Data.Abstract
 {
     public interface IProductRepository: IGenericRepository<Product>
     {
+        ProductDetail getMaxPrice(int id);
+        ProductDetail getMinPrice(int id);
     }
 }

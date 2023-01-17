@@ -21,5 +21,13 @@ namespace PetShop.Data.Concrete.Ef
                 return context as PetContext;
             }
         }
+        public ProductDetail getMaxPrice(int id)
+        {
+            return petContext.ProductDetails.OrderByDescending(i => i.Price).FirstOrDefault();
+        }
+        public ProductDetail getMinPrice(int id)
+        {
+            return petContext.ProductDetails.OrderBy(i => i.Price).FirstOrDefault();
+        }
     }
 }
