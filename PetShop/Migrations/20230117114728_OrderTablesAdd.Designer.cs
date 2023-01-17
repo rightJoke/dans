@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetShop.Data.Concrete.Ef;
 
 namespace PetShop.Migrations
 {
     [DbContext(typeof(PetContext))]
-    partial class PetContextModelSnapshot : ModelSnapshot
+    [Migration("20230117114728_OrderTablesAdd")]
+    partial class OrderTablesAdd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -153,17 +155,8 @@ namespace PetShop.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
-
-                    b.Property<string>("SmallImageUrl")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ImageId");
 
@@ -254,9 +247,6 @@ namespace PetShop.Migrations
 
                     b.Property<int?>("GenreId")
                         .HasColumnType("int");
-
-                    b.Property<bool>("IsHome")
-                        .HasColumnType("bit");
 
                     b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");

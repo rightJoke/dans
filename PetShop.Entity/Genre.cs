@@ -11,5 +11,7 @@ namespace PetShop.Entity
         public int GenreId { get; set; }
         public string GenreName { get; set; }
         public List<Animal> Animals { get; set; }
+        public List<Category> categories { get; set; }
+        public List<Product> products { get; set; }
     }
 }

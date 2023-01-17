@@ -13,16 +13,16 @@ namespace PetShop.Controllers
     public class HomeController : Controller
     {
 
-
+        private IProductRepository ProductRepository;
         private IPageRepository pageRepository;
-        public HomeController(IPageRepository _pageRepository)
+        public HomeController(IPageRepository _pageRepository, IProductRepository _ProductRepository)
         {
             pageRepository = _pageRepository;
-
+            ProductRepository = _ProductRepository;
         }
         public IActionResult Index()
         {
-            return View();
+            return View(ProductRepository.GetAll().Where(i=>i.IsHome).ToList());
         }
 
         public IActionResult About(int id=1)

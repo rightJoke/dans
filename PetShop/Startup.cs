@@ -27,6 +27,7 @@ namespace PetShop
         {
             services.AddDbContext<PetContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AzureConnection"),b=>b.MigrationsAssembly("PetShop")));
             services.AddTransient<IPageRepository, EfPageRepository>();
+            services.AddTransient<IProductRepository, EfProductRepository>();
             services.AddControllersWithViews();
         }
 

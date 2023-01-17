@@ -23,7 +23,7 @@ namespace PetShop.Data.Concrete.Ef
 
         public IQueryable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return context.Set<T>();
         }
     }
 }
